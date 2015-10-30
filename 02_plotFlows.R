@@ -27,16 +27,19 @@ for(lang in colnames(txt)) {
     # http://www.buildingwidgets.com/blog/2015/9/17/week-37-parsetr
     value = htmlwidgets::JS("function(d){return d.values}"),
     tension = 0.7, width = "100%", height = 500,
-    spacing = 7, duration = 300)
+    spacing = 15, duration = 300)
 
+  # overwite default padding
+  ps.chart$sizingPolicy$browser$padding <- 5
   saveWidget(ps.chart, file = tmp_html, selfcontained = FALSE, libdir = "js")
 
   swi_widget(tmp_html, output.html,
     h2 = txt["title",lang],
-    descr = txt["description",lang],
+    descr = txt["description",lang], 
     h3 = txt["subtitle",lang],
-    source = paste0(txt["source",lang], ": ", htmlLink("http://appsso.eurostat.ec.europa.eu/nui/show.do", txt["eurostat",lang])),
-    author = paste0("Duc-Quang Nguyen | ", htmlLink("http://www.swissinfo.ch", "swissinfo.ch"))
+    source = paste0(txt["source",lang], ": ", htmlLink("http://ec.europa.eu/eurostat/en/web/products-datasets/-/MIGR_ASYAPPCTZM", txt["eurostat",lang])),
+    author = paste0("Duc-Quang Nguyen | ", htmlLink("http://www.swissinfo.ch", "swissinfo.ch")),
+    footer = txt["description2",lang]
   )
 }
 

@@ -1,9 +1,10 @@
 code,en
 title,Asylum applications in Europe in 2015
-description,
-subtitle,Jan-Sept 2015: 807'965 asylum applications
-origins,origins
-destinations,destinations
+description,The horizontal lines show the the number of asylum applications by country of origin (top line) and by country of application (bottom line). The ribbons' size is proportional to the number of asylum applications by country of origin and destination.
+description2,"Move your mouse over the graphic to read more about the data. If you mouse over the countries (at the top or at the bottom), it will show the total number of asylum applications by country and the percentages as a fraction of all applications. If you move over a ribbon, you will see the same for a given country of origin and destination. Countries can be reordered by clicking, holding and dragging. Or they can be sorted alphabetically (""alpha"") or by size (""size""). "
+subtitle,"Jan - Sept 2015: 807,965 asylum applications"
+origins,Origins
+destinations,Destinations
 source,source
 eurostat,Eurostat
 code.Afghanistan,Afghanistan
