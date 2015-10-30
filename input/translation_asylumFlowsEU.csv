@@ -1,25 +1,25 @@
-code,en
-title,Asylum applications in Europe in 2015
-description,The horizontal lines show the the number of asylum applications by country of origin (top line) and by country of application (bottom line). The ribbons' size is proportional to the number of asylum applications by country of origin and destination.
-description2,"Move your mouse over the graphic to read more about the data. If you mouse over the countries (at the top or at the bottom), it will show the total number of asylum applications by country and the percentages as a fraction of all applications. If you move over a ribbon, you will see the same for a given country of origin and destination. Countries can be reordered by clicking, holding and dragging. Or they can be sorted alphabetically (""alpha"") or by size (""size""). "
-subtitle,"Jan - Sept 2015: 807,965 asylum applications"
-origins,Origins
-destinations,Destinations
-source,source
-eurostat,Eurostat
-code.Afghanistan,Afghanistan
-code.Albania,Albania
-code.Eritrea,Eritrea
-code.Iraq,Iraq
-code.Kosovo,Kosovo
-code.Othercountries,Other countries
-code.Syria,Syria
-code.Austria,Austria
-code.Switzerland,Switzerland
-code.Germany,Germany
-code.France,France
-code.Hungary,Hungary
-code.Italy,Italy
-code.OtherEuropeancountries,Other European countries
-code.Sweden,Sweden
-code.UnitedKingdom,United Kingdom
+code,en,fr
+title,Asylum applications in Europe in 2015,Demandes d'asile en Europe 2015
+description,The horizontal lines show the the number of asylum applications by country of origin (top line) and by country of application (bottom line). The ribbons' size is proportional to the number of asylum applications by country of origin and destination.,The horizontal lines show the the number of asylum applications by country of origin (top line) and by country of application (bottom line). The ribbons' size is proportional to the number of asylum applications by country of origin and destination.
+description2,"Move your mouse over the graphic to read more about the data. If you mouse over the countries (at the top or at the bottom), it will show the total number of asylum applications by country and the percentages as a fraction of all applications. If you move over a ribbon, you will see the same for a given country of origin and destination. Countries can be reordered by clicking, holding and dragging. Or they can be sorted alphabetically (""alpha"") or by size (""size""). ","Move your mouse over the graphic to read more about the data. If you mouse over the countries (at the top or at the bottom), it will show the total number of asylum applications by country and the percentages as a fraction of all applications. If you move over a ribbon, you will see the same for a given country of origin and destination. Countries can be reordered by clicking, holding and dragging. Or they can be sorted alphabetically (""alpha"") or by size (""size""). "
+subtitle,"Jan - Sept 2015: 807,965 asylum applications","Jan - Sept 2015: 807,965 asylum applications"
+origins,Origins,Origines
+destinations,Destinations,Destinations
+source,source,source
+eurostat,Eurostat,Eurostat
+code.Afghanistan,Afghanistan,Afghanistan
+code.Albania,Albania,Albania
+code.Eritrea,Eritrea,Eritrea
+code.Iraq,Iraq,Iraq
+code.Kosovo,Kosovo,Kosovo
+code.Othercountries,Other countries,Other countries
+code.Syria,Syria,Syria
+code.Austria,Austria,Austria
+code.Switzerland,Switzerland,Suisse
+code.Germany,Germany,Allemagne
+code.France,France,France
+code.Hungary,Hungary,Hungary
+code.Italy,Italy,Italy
+code.OtherEuropeancountries,Other European countries,Autres pays européens
+code.Sweden,Sweden,Suède
+code.UnitedKingdom,United Kingdom,United Kingdom

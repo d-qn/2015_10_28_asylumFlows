@@ -14,12 +14,23 @@ txt <- read.csv(translation.file, row.names = 1, stringsAsFactors = F)
 
 for(lang in colnames(txt)) {
   dd <- df
+  
   tmp_html <- paste0("flow_EU_tmp_", lang, ".html")
   output.html <- paste0("asylumApplicationsFlow_EU_", lang, ".html")
 
+  # rename origin / citizen country names
+  idx <- match(paste0("code.", gsub(" ", "", dd$citizen)), rownames(txt))
+  stopifnot(all(!is.na(idx)))
+  dd$citizen <- txt[idx, lang]
+  
+  # rename destination / geo names
+  idx <- match(paste0("code.", gsub(" ", "", df$geo)), rownames(txt))
+  stopifnot(all(!is.na(idx)))
+  dd$geo <- txt[idx, lang]
+  
+  # rename dimensions
   colnames(dd)[match(c("citizen", "geo"), colnames(dd))] <- txt[c("origins", "destinations"), lang]
-
-  colNums <- match(c("values", txt[c("origins", "destinations"), lang]),colnames(dd))
+  colNums <- match(c("values", txt[c("origins", "destinations"), lang]), colnames(dd))
 
   ps.chart <- parset(select(dd, colNums),
     dimensions =  txt[c("origins", "destinations"), lang],
