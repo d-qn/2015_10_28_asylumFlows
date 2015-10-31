@@ -14,7 +14,7 @@ txt <- read.csv(translation.file, row.names = 1, stringsAsFactors = F)
 
 for(lang in colnames(txt)) {
   dd <- df
-  
+
   tmp_html <- paste0("flow_EU_tmp_", lang, ".html")
   output.html <- paste0("asylumApplicationsFlow_EU_", lang, ".html")
 
@@ -22,12 +22,12 @@ for(lang in colnames(txt)) {
   idx <- match(paste0("code.", gsub(" ", "", dd$citizen)), rownames(txt))
   stopifnot(all(!is.na(idx)))
   dd$citizen <- txt[idx, lang]
-  
+
   # rename destination / geo names
   idx <- match(paste0("code.", gsub(" ", "", df$geo)), rownames(txt))
   stopifnot(all(!is.na(idx)))
   dd$geo <- txt[idx, lang]
-  
+
   # rename dimensions
   colnames(dd)[match(c("citizen", "geo"), colnames(dd))] <- txt[c("origins", "destinations"), lang]
   colNums <- match(c("values", txt[c("origins", "destinations"), lang]), colnames(dd))
@@ -37,7 +37,7 @@ for(lang in colnames(txt)) {
     # use some JavaScript to inform parset that Freq has the value
     # http://www.buildingwidgets.com/blog/2015/9/17/week-37-parsetr
     value = htmlwidgets::JS("function(d){return d.values}"),
-    tension = 0.7, width = "100%", height = 500,
+    tension = 0.7, width = "100%", height = 450,
     spacing = 15, duration = 300)
 
   # overwite default padding
@@ -46,11 +46,12 @@ for(lang in colnames(txt)) {
 
   swi_widget(tmp_html, output.html,
     h2 = txt["title",lang],
-    descr = txt["description",lang], 
+    descr = txt["description",lang],
     h3 = txt["subtitle",lang],
-    source = paste0(txt["source",lang], ": ", htmlLink("http://ec.europa.eu/eurostat/en/web/products-datasets/-/MIGR_ASYAPPCTZM", txt["eurostat",lang])),
+    source = paste0(txt["source",lang], ": ", 
+      htmlLink("http://ec.europa.eu/eurostat/en/web/products-datasets/-/MIGR_ASYAPPCTZM", txt["eurostat",lang])),
     author = paste0("Duc-Quang Nguyen | ", htmlLink("http://www.swissinfo.ch", "swissinfo.ch")),
-    footer = txt["description2",lang]
+    footer = paste0("<strong>",  txt["footer.title",lang], "</strong><br>", txt["footer",lang])
   )
 }
 
